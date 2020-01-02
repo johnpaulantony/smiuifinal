@@ -14,7 +14,7 @@ export class TraineeserviceService {
    source=interval(1000);
   constructor(private http: HttpClient) {
 
-    this.Url = 'http://192.168.6.25:8080/smi';
+    this.Url = 'smiinnothinkservice.herokuapp.com/smi';
   }
   public getCourseDetails(): Observable<Issue[]> {
     return this.http.get<Issue[]>(this.Url + "/get");
