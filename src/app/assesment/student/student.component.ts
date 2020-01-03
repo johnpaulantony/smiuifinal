@@ -13,6 +13,8 @@ export class StudentComponent implements OnInit {
   @ViewChild("mbno", { static: false }) mbno: ElementRef;
   t: string;
   q: string;
+  p:Number=1;
+  count:Number=10;
 stud:Studentdetails[];
 sub1: any;
   selected: any;
