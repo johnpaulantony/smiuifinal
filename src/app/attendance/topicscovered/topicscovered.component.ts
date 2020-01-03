@@ -15,6 +15,7 @@ export class TopicscoveredComponent implements OnInit {
   subject: Issue[];
   topic1: Issue[];
   abcd: Issue;
+  trainer: Issue;
   getassign: Studentdetails[];
   onOptionsSelected(value: string) {
     this.traineeservice.getassigned(value).subscribe(data => {
@@ -42,5 +43,8 @@ export class TopicscoveredComponent implements OnInit {
     this.traineeservice.getSubjectDetails().subscribe(data => { this.subject = data; })
     this.traineeservice.getTopicDetails().subscribe(data => { this.topic1 = data; })
     this.traineeservice.getbatch().subscribe(data => { this.assign = data; })
+    this.traineeservice.gettrainer().subscribe(data => {
+      this.trainer = data; console.log(this.trainer.length)
+    });
   }
 }
