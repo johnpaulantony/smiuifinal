@@ -15,7 +15,7 @@ export class TopicscoveredComponent implements OnInit {
   subject: Issue[];
   topic1: Issue[];
   abcd: Issue;
-  trainer: Issue;
+  trainer: Issue[];
   getassign: Studentdetails[];
   onOptionsSelected(value: string) {
     this.traineeservice.getassigned(value).subscribe(data => {
