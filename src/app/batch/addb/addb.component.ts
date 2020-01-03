@@ -11,7 +11,7 @@ export class AddbComponent implements OnInit {
   @ViewChild("date", { static: false }) date: ElementRef;
   @ViewChild("course_name_1", { static: false }) course_name_1: ElementRef;
   @ViewChild("type", { static: false }) type: ElementRef;
-  result: any;
+  result1: any;
   public batch: Issue;
   course: Issue[];
   constructor(public traineeservice: TraineeserviceService) {
@@ -19,7 +19,7 @@ export class AddbComponent implements OnInit {
   onSubmit() {
     var d1 = new Date();
     this.batch.batchCreatedDate = d1.getFullYear() + "-" + (d1.getMonth() + 1) + "-" + d1.getDate();
-    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result);
+    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result1=result);
   }
   ngOnInit() {
     this.batch = new Issue();
